@@ -15,12 +15,16 @@ const App = () => {
       .get('https://api.adviceslip.com/advice')
       .then((response) => {
         setAdvice(response.data.slip.advice);
-        console.log('i am fired');
       })
       .catch((error) => console.log(error));
   };
   return (
-    <div >
+    <div className='App' style={{
+      display: "flex",
+      paddingTop: "8%",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
 
       <AdviceGenerator />
 

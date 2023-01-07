@@ -8,18 +8,24 @@ button {
     border: none;
 }
 
+button:hover {
+    transform: rotate(240deg);
+    transition: 1s;
+}
+
 button {
+    cursor: pointer;
     display: block;
-    margin-left: 13.5%;
+    margin-left: 31.5%;
     margin-top: -35px;
 }
 
 div .card {
-    width: 25%;
+    width: 55%;
     border-radius: 12px;
     padding: 80px;
     height: 30%;
-    background-color: #313A49;
+    /* background-color: #313A49; */
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
 }
