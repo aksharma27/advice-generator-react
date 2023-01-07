@@ -20,11 +20,11 @@ const App = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <>
+    <div >
 
       <AdviceGenerator />
 
-    </>
+    </div>
   );
 };
 export default App;

@@ -9,20 +9,24 @@ const AdviceGenerator = () => {
         getAdvice();
     }, []);
 
+    // B46823
+    // 572525
+    // 313A49
+
     const getAdvice = () => {
         axios
             .get('https://api.adviceslip.com/advice')
             .then((response) => {
                 setAdvice(response.data.slip.advice);
-                console.log('i am fired');
             })
             .catch((error) => console.log(error));
     };
     return (
         <>
             <div className='advice-generator'>
-                <div className='card'>
-                    <h1 className='heading'>{advice}</h1>
+                <div className='card' style={{ boxShadow: "10px 10px 260px 30px black" }}>
+                    <h5 style={{ marginTop: "-20px", marginBottom: "50px" }}>ADVICE #117</h5>
+                    <h1 className='heading' style={{ color: "white" }}>"{advice}"</h1>
                     <hr />
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" fill="currentColor" class="bi bi-pause-fill pause" viewBox="0 0 16 16">
                         <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
