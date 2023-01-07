@@ -1,14 +1,30 @@
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import AdviceGenerator from './components/AdviceGenerator';
 
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [advice, setAdvice] = useState(null);
 
+  useEffect(() => {
+    getAdvice();
+  }, []);
+
+  const getAdvice = () => {
+    axios
+      .get('https://api.adviceslip.com/advice')
+      .then((response) => {
+        setAdvice(response.data.slip.advice);
+        console.log('i am fired');
+      })
+      .catch((error) => console.log(error));
+  };
   return (
-    <div className="App">
+    <>
 
-    </div>
-  )
-}
+      <AdviceGenerator />
 
-export default App
+    </>
+  );
+};
+export default App;

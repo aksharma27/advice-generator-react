@@ -1,0 +1,39 @@
+button {
+    width: 70px;
+    height: 69px;
+    border-radius: 50%;
+    background-color: #55FCAA;
+    border: none;
+}
+
+button {
+    display: block;
+    margin-left: 13.5%;
+    margin-top: -35px;
+}
+
+div .card {
+    width: 25%;
+    border-radius: 12px;
+    padding: 80px;
+    height: 30%;
+    background-color: orange;
+}
+
+hr {
+    margin-bottom: 12px;
+    display: inline-block;
+    ;
+    width: 40%;
+    /* height: 1px; */
+    color: #444E5C;
+    /* border: 2px; */
+    background-color: #444E5C;
+    height: 1px;
+    border: 0;
+}
+
+svg.bi.bi-pause-fill.pause {
+    padding: 0 10px;
+    color: white;
+}
